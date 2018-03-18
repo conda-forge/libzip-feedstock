@@ -1,6 +1,6 @@
 {% set name = "libzip" %}
-{% set version = "1.4.0" %}
-{% set sha256 = "759a89690e155ca52247638b9f97e16e48fbb6077abb7ce2d921dd5b81259940" %}
+{% set version = "1.5.0" %}
+{% set sha256 = "fd320f57a7de2f729aa6948a9487530e57e0ca8e4ef6b4e418b525a635ab689c" %}
 
 package:
   name: {{ name|lower }}
@@ -21,7 +21,7 @@ source:
     - 0003-Use-cmake-E-tar-to-extract-test-data.patch  # [win]
 
 build:
-  number: 1
+  number: 0
   features:
     - vc9   # [win and py27]
     - vc10  # [win and py34]
