@@ -14,7 +14,7 @@ source:
 build:
   # Skip py35 since py36 is built and uses same vc14
   skip: True  # [win and py35]
-  number: 0
+  number: 1
   features:
     - vc9   # [win and py27]
     - vc10  # [win and py34]
@@ -32,7 +32,7 @@ requirements:
     - vc 14  # [win and py35]
     - vc 14  # [win and py36]
     # perl is needed to run the package tests
-    - perl 5.20.3.1  # avoid making a matrix of perl builds
+    - perl  # avoid making a matrix of perl builds
   run:
     - zlib 1.2.11
     - bzip2 1.0.*
