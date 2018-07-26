@@ -18,14 +18,16 @@ archive can be reverted. The API is documented by man pages.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libzip-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libzip-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/libzip-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libzip-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libzip-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libzip-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/libzip-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/libzip-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/libzip-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/libzip-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libzip/badges/version.svg)](https://anaconda.org/conda-forge/libzip)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libzip/badges/downloads.svg)](https://anaconda.org/conda-forge/libzip)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libzip-green.svg)](https://anaconda.org/conda-forge/libzip) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libzip.svg)](https://anaconda.org/conda-forge/libzip) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libzip.svg)](https://anaconda.org/conda-forge/libzip) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libzip.svg)](https://anaconda.org/conda-forge/libzip) |
 
 Installing libzip
 =================
