@@ -14,7 +14,7 @@ source:
 build:
   # Skip py35 since py36 is built and uses same vc14
   skip: True  # [win and py35]
-  number: 0
+  number: 1000
   features:
     - vc9   # [win and py27]
     - vc10  # [win and py34]
