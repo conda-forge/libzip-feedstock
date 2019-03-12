@@ -1,6 +1,6 @@
 {% set name = "libzip" %}
-{% set version = "1.5.1" %}
-{% set sha256 = "47eaa45faa448c72bd6906e5a096846c469a185f293cafd8456abb165841b3f2" %}
+{% set version = "1.5.2" %}
+{% set sha256 = "be694a4abb2ffe5ec02074146757c8b56084dbcebf329123c84b205417435e15" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   # Skip py35 since py36 is built and uses same vc14
-  number: 1002
+  number: 0
 
 requirements:
   build:
