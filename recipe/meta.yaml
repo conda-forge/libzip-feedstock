@@ -13,7 +13,7 @@ source:
 
 build:
   # Skip py35 since py36 is built and uses same vc14
-  number: 1003
+  number: 1004
 
 requirements:
   build:
@@ -23,10 +23,12 @@ requirements:
   host:
     - zlib
     - bzip2
+    - openssl
     # perl is needed to run the package tests
   run:
     - zlib
     - bzip2
+    - openssl
 
 test:
   commands:
