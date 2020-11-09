@@ -10,10 +10,12 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://libzip.org/download/libzip-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - fix-bz2-pkgconfig-win.patch  # [win]
 
 build:
   # Skip py35 since py36 is built and uses same vc14
-  number: 1005
+  number: 1006
 
 requirements:
   build:
