@@ -1,13 +1,13 @@
 bzip2:
 - '1'
 c_compiler:
-- vs2008
+- vs2017
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 openssl:
-- 1.1.1a
+- 1.1.1
 pin_run_as_build:
   bzip2:
     max_pin: x
@@ -15,5 +15,7 @@ pin_run_as_build:
     max_pin: x.x.x
   zlib:
     max_pin: x.x
+target_platform:
+- win-64
 zlib:
 - '1.2'
