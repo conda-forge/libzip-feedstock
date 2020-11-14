@@ -1,6 +1,6 @@
-From 665d39050e4d53daa462ecccc4db88c5c871ed37 Mon Sep 17 00:00:00 2001
+From 54bbb4e5919eb5860df4f7bab4d208db2014e760 Mon Sep 17 00:00:00 2001
 From: Silvio Traversaro <silvio@traversaro.it>
-Date: Mon, 9 Nov 2020 17:12:49 +0100
+Date: Mon, 9 Nov 2020 17:03:17 +0100
 Subject: [PATCH] Fix bzip2 name to match the one of conda-forge on Windows
 
 ---
@@ -8,16 +8,15 @@ Subject: [PATCH] Fix bzip2 name to match the one of conda-forge on Windows
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 69e6548e..c6ae44b3 100644
+index b556efc8..b2580a16 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -246,7 +246,7 @@ SET(bindir \${exec_prefix}/${CMAKE_INSTALL_BINDIR})
- SET(libdir \${exec_prefix}/${CMAKE_INSTALL_LIBDIR})
- SET(includedir \${prefix}/${CMAKE_INSTALL_INCLUDEDIR})
- IF(BZIP2_FOUND)
--  SET(LIBS "${LIBS} -lbz2")
-+  SET(LIBS "${LIBS} -lbzip2")
- ENDIF()
- SET(LIBS "${LIBS} -lz")
- IF(CMAKE_SYSTEM_NAME MATCHES BSD)
- 
+@@ -297,7 +297,7 @@ foreach(LIB ${LIBS_PRIVATE})
+   endif()
+   set(LIBS "${LIBS} -l${LIB}")
+ endforeach()
+-string(REGEX REPLACE "-lBZip2::BZip2" "-lbz2" LIBS ${LIBS})
++string(REGEX REPLACE "-lBZip2::BZip2" "-lbzip2" LIBS ${LIBS})
+ string(REGEX REPLACE "-lLibLZMA::LibLZMA" "-llzma" LIBS ${LIBS})
+ string(REGEX REPLACE "-lOpenSSL::Crypto" "-lssl -lcrypto" LIBS ${LIBS})
+ string(REGEX REPLACE "-lZLIB::ZLIB" "-lz" LIBS ${LIBS})

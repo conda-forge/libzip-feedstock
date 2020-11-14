@@ -1,6 +1,6 @@
 {% set name = "libzip" %}
-{% set version = "1.5.1" %}
-{% set sha256 = "47eaa45faa448c72bd6906e5a096846c469a185f293cafd8456abb165841b3f2" %}
+{% set version = "1.7.3" %}
+{% set sha256 = "0e2276c550c5a310d4ebf3a2c3dfc43fb3b4602a072ff625842ad4f3238cb9cc" %}
 
 package:
   name: {{ name|lower }}
@@ -14,13 +14,14 @@ source:
     - fix-bz2-pkgconfig-win.patch  # [win]
 
 build:
-  # Skip py35 since py36 is built and uses same vc14
-  number: 1006
+  number: 0
+  run_exports:
+    - {{ pin_subpackage(name, max_pin='x') }}
 
 requirements:
   build:
     - cmake
-    - perl 5.26.*  # avoid making a matrix of perl builds
+    - perl 5.32.*  # avoid making a matrix of perl builds
     - {{ compiler('c') }}
   host:
     - zlib
