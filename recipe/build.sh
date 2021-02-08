@@ -2,7 +2,7 @@
 
 mkdir build && cd build
 
-cmake \
+cmake ${CMAKE_ARGS} \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_INSTALL_LIBDIR=lib \
     -DCMAKE_INSTALL_INCLUDEDIR=include \
@@ -16,5 +16,7 @@ cmake \
     -DENABLE_ZSTD=OFF \
     ..
 make
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
 make test
+fi
 make install
