@@ -1,6 +1,6 @@
 {% set name = "libzip" %}
-{% set version = "1.7.3" %}
-{% set sha256 = "0e2276c550c5a310d4ebf3a2c3dfc43fb3b4602a072ff625842ad4f3238cb9cc" %}
+{% set version = "1.8.0" %}
+{% set sha256 = "30ee55868c0a698d3c600492f2bea4eb62c53849bcf696d21af5eb65f3f3839e" %}
 
 package:
   name: {{ name|lower }}
@@ -47,12 +47,12 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'A C library for reading, creating, and modifying zip archives.'
+  summary: A C library for reading, creating, and modifying zip archives.
   description: |
-      libzip is a C library for reading, creating, and modifying zip archives.
-      Files can be added from data buffers, files, or compressed data copied
-      directly from other zip archives. Changes made without closing the
-      archive can be reverted. The API is documented by man pages.
+    libzip is a C library for reading, creating, and modifying zip archives.
+    Files can be added from data buffers, files, or compressed data copied
+    directly from other zip archives. Changes made without closing the
+    archive can be reverted. The API is documented by man pages.
   doc_url: https://libzip.org/documentation/
   dev_url: https://github.com/nih-at/libzip
 
