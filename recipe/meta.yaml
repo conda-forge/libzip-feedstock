@@ -18,7 +18,7 @@ build:
 requirements:
   build:
     - cmake
-    - perl 5.26.*  # avoid making a matrix of perl builds
+    - perl
     - {{ compiler('c') }}
   host:
     - zlib
