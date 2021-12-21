@@ -13,20 +13,23 @@ source:
 
 build:
   # Skip py35 since py36 is built and uses same vc14
-  number: 1001
+  number: 1002
 
 requirements:
   build:
     - cmake
+    - make                  # [not win]
     - perl
     - {{ compiler('c') }}
   host:
     - zlib
     - bzip2
-    # perl is needed to run the package tests
+    - openssl
+    # perl is needed to run the package test
   run:
     - zlib
     - bzip2
+    - openssl
 
 test:
   commands:
@@ -53,3 +56,4 @@ about:
 extra:
   recipe-maintainers:
     - ceholden
+    - katietz
