@@ -1,6 +1,6 @@
 {% set name = "libzip" %}
-{% set version = "1.8.0" %}
-{% set sha256 = "30ee55868c0a698d3c600492f2bea4eb62c53849bcf696d21af5eb65f3f3839e" %}
+{% set version = "1.9.0" %}
+{% set sha256 = "4cab273e28d08424eaa70e3690dbda61c5ea22b3b1754f43568b33d3757fb68f" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
     - fix-bz2-pkgconfig-win.patch  # [win]
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
