@@ -14,7 +14,7 @@ source:
     - fix-bz2-pkgconfig-win.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
@@ -29,10 +29,6 @@ requirements:
     - bzip2
     - openssl
     # perl is needed to run the package tests
-  run:
-    - zlib
-    - bzip2
-    - openssl
 
 test:
   commands:
