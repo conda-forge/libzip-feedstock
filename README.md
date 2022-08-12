@@ -259,6 +259,3 @@ Feedstock Maintainers
 * [@ceholden](https://github.com/ceholden/)
 * [@traversaro](https://github.com/traversaro/)
 
-
-<!-- dummy commit to enable rerendering -->
-
