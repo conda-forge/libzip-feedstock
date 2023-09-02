@@ -12,9 +12,10 @@ source:
   sha256: {{ sha256 }}
   patches:
     - fix-bz2-pkgconfig-win.patch  # [win]
+    - fix-zstd-pkgconfig.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
