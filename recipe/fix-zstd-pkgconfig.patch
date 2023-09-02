@@ -1,0 +1,23 @@
+From c719428916b4d19e838f873b1a177b126a080d61 Mon Sep 17 00:00:00 2001
+From: Thomas Klausner <wiz@gatalith.at>
+Date: Thu, 24 Aug 2023 14:07:50 +0200
+Subject: [PATCH] Check for zstd_TARGET before using it in a regex.
+
+Closes #404.
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b2e77241..b7bb7e3f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -349,7 +349,7 @@ endforeach()
+ STRING(CONCAT zlib_link_name "-l" ${ZLIB_LINK_LIBRARY_NAME})
+ string(REGEX REPLACE "-lBZip2::BZip2" "-lbz2" LIBS ${LIBS})
+ string(REGEX REPLACE "-lLibLZMA::LibLZMA" "-llzma" LIBS ${LIBS})
+-if(ENABLE_ZSTD)
++if(zstd_TARGET)
+   string(REGEX REPLACE "-l${zstd_TARGET}" "-lzstd" LIBS ${LIBS})
+ endif()
+ string(REGEX REPLACE "-lOpenSSL::Crypto" "-lssl -lcrypto" LIBS ${LIBS})
