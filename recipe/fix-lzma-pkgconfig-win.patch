@@ -1,0 +1,22 @@
+From e8eff4391791086d86d6f8cb5cdb90c7e6f239f8 Sun Sep 2 22:54:00 2023
+From: Martin Pecka <peci1@seznam.cz>
+Date: Sun, 3 Sep 2023 05:17:52 +0200
+Subject: [PATCH] Fix lzma name to match the one of conda-forge on Windows
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b2e77241..b6e1cb6a 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -348,7 +348,7 @@ foreach(LIB ${LIBS_PRIVATE})
+ endforeach()
+ STRING(CONCAT zlib_link_name "-l" ${ZLIB_LINK_LIBRARY_NAME})
+ string(REGEX REPLACE "-lBZip2::BZip2" "-lbzip2" LIBS ${LIBS})
+-string(REGEX REPLACE "-lLibLZMA::LibLZMA" "-llzma" LIBS ${LIBS})
++string(REGEX REPLACE "-lLibLZMA::LibLZMA" "-lliblzma" LIBS ${LIBS})
+  if(zstd_TARGET)
+   string(REGEX REPLACE "-l${zstd_TARGET}" "-lzstd" LIBS ${LIBS})
+  endif()
