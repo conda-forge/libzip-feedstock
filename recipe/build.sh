@@ -2,7 +2,7 @@
 
 mkdir build && cd build
 
-cmake ${CMAKE_ARGS} \
+cmake -GNinja ${CMAKE_ARGS} \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_INSTALL_LIBDIR=lib \
     -DCMAKE_INSTALL_INCLUDEDIR=include \
@@ -15,8 +15,8 @@ cmake ${CMAKE_ARGS} \
     -DENABLE_LZMA=OFF \
     -DENABLE_ZSTD=OFF \
     ..
-make
+ninja
 if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
-make test
+ninja test
 fi
-make install
+ninja install

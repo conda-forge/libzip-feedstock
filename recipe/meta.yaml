@@ -22,8 +22,7 @@ build:
 requirements:
   build:
     - cmake
-    - make  # [not win]
-    - ninja  # [win]
+    - ninja
     - perl 5.32.*  # avoid making a matrix of perl builds
     - {{ compiler('c') }}
   host:
