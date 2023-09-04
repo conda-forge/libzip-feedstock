@@ -15,14 +15,15 @@ source:
     - fix-zstd-pkgconfig.patch
 
 build:
-  number: 1
+  number: 2
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
 requirements:
   build:
     - cmake
-    - make                               # [not win]
+    - make  # [not win]
+    - ninja  # [win]
     - perl 5.32.*  # avoid making a matrix of perl builds
     - {{ compiler('c') }}
   host:
