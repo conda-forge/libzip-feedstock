@@ -11,11 +11,10 @@ source:
   url: https://libzip.org/download/libzip-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    - fix-bz2-pkgconfig-win.patch  # [win]
-    - fix-zstd-pkgconfig.patch
+    - pc-remove-libs-private.patch
 
 build:
-  number: 2
+  number: 3
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
