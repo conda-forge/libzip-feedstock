@@ -1,6 +1,6 @@
 {% set name = "libzip" %}
-{% set version = "1.11.2" %}
-{% set sha256 = "6b2a43837005e1c23fdfee532b78f806863e412d2089b9c42b49ab08cbcd7665" %}
+{% set version = "1.11.3" %}
+{% set sha256 = "76653f135dde3036036c500e11861648ffbf9e1fc5b233ff473c60897d9db0ea" %}
 
 package:
   name: {{ name|lower }}
