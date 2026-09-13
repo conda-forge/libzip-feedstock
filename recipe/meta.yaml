@@ -22,14 +22,12 @@ requirements:
   build:
     - cmake
     - ninja
-    - perl 5.32.*  # avoid making a matrix of perl builds
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
     - zlib
     - bzip2
     - openssl
-    # perl is needed to run the package tests
 
 test:
   commands:
