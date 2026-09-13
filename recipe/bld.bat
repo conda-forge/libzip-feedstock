@@ -18,7 +18,10 @@ cmake -G "Ninja" ^
     ..
 if errorlevel 1 exit /B 1
 
-ctest
+cmake --build . --config Release
+if errorlevel 1 exit /B 1
+
+ctest --output-on-failure
 if errorlevel 1 exit /B 1
 
 cmake --build . --target install --config Release
